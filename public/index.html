@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Maria Blair’s Creative Studio • MBCS</title>
+    <meta
+      name="description"
+      content="Beautiful websites. Thoughtful design. Built for your business. MBCS creates elegant, fast, and affordable marketing sites for small businesses."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- DEV PREVIEW ONLY (Canvas/Local without build): Tailwind CDN. Remove before deploying to Cloudflare Pages and restore compiled CSS link. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: ["class"], theme: { extend: {} } };
+    </script>
+    <script>
+      tailwind.config = {
+        // theme: {
+        //   extend: {
+        //     fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui"] }
+        //   }
+        // },
+        darkMode: ["class"]
+        // prefix: ""
+      };
+    </script>
+    <style>
+      /* Smooth scrolling for in-page anchors */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-zinc-50 text-zinc-800 dark:bg-zinc-950 dark:text-zinc-100">
+    <!-- ========================================================= -->
+    <!-- Header / Nav                                              -->
+    <!-- Swap with TailwindPlus › Navigation / Minimal if desired  -->
+    <!-- ========================================================= -->
+    <header
+      class="sticky top-0 z-40 border-b border-zinc-200/70 bg-white/70 backdrop-blur dark:border-white/10 dark:bg-zinc-950/60"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4"
+      >
+        <a href="#home" class="flex items-center gap-3 font-semibold">
+          <span
+            class="inline-grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-fuchsia-500 via-violet-500 to-indigo-500 text-white"
+            >M</span
+          >
+          <span>Maria Blair’s Creative Studio</span>
+        </a>
+        <nav
+          class="hidden items-center gap-8 text-sm text-zinc-600 md:flex dark:text-zinc-300"
+        >
+          <a href="#services" class="hover:text-zinc-900 dark:hover:text-white"
+            >Services</a
+          >
+          <a href="#about" class="hover:text-zinc-900 dark:hover:text-white"
+            >About</a
+          >
+          <a href="#reviews" class="hover:text-zinc-900 dark:hover:text-white"
+            >Reviews</a
+          >
+          <a
+            href="#contact"
+            class="inline-flex items-center gap-2 rounded-full bg-zinc-900 px-4 py-2 font-medium text-white hover:opacity-90 dark:bg-white dark:text-zinc-900"
+            >Start a Project</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <!-- ======================================== -->
+      <!-- HERO                                      -->
+      <!-- Swap with TailwindPlus › Hero blocks      -->
+      <!-- ======================================== -->
+      <section class="relative overflow-hidden">
+        <div
+          class="absolute -inset-x-10 -top-40 h-80 bg-gradient-to-br from-fuchsia-200/60 via-violet-200/60 to-indigo-200/60 blur-3xl dark:from-fuchsia-600/30 dark:via-violet-600/30 dark:to-indigo-600/30"
+        ></div>
+        <div class="mx-auto max-w-7xl px-6 pt-20 pb-16 text-center">
+          <h1 class="text-4xl font-semibold tracking-tight md:text-6xl">
+            Beautiful websites. Thoughtful design.
+            <span
+              class="bg-gradient-to-r from-fuchsia-600 to-indigo-600 bg-clip-text text-transparent"
+              >Built for your business.</span
+            >
+          </h1>
+          <p
+            class="mx-auto mt-6 max-w-2xl text-lg text-zinc-600 dark:text-zinc-300"
+          >
+            MBCS crafts elegant, fast, and affordable marketing sites for small
+            businesses using modern tools and clean UX.
+          </p>
+          <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+            <a
+              href="#contact"
+              class="inline-flex items-center justify-center rounded-full bg-zinc-900 px-6 py-3 font-medium text-white hover:opacity-90"
+              >Get a Free Quote</a
+            >
+            <a
+              href="#services"
+              class="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-6 py-3 font-medium text-zinc-900 hover:bg-zinc-50 dark:border-white/10 dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800"
+              >Explore Services</a
+            >
+          </div>
+          <div class="mt-14 grid grid-cols-2 gap-6 opacity-90 md:grid-cols-4">
+            <!-- Simple trust badges; replace with TailwindPlus Logos/Stats blocks -->
+            <div
+              class="rounded-2xl border border-zinc-200 p-4 dark:border-white/10"
+            >
+              <p class="text-sm text-zinc-500 dark:text-zinc-400">
+                Fast turnaround
+              </p>
+              <p class="font-semibold">1–2 weeks</p>
+            </div>
+            <div
+              class="rounded-2xl border border-zinc-200 p-4 dark:border-white/10"
+            >
+              <p class="text-sm text-zinc-500 dark:text-zinc-400">
+                Performance
+              </p>
+              <p class="font-semibold">90+ Lighthouse</p>
+            </div>
+            <div
+              class="rounded-2xl border border-zinc-200 p-4 dark:border-white/10"
+            >
+              <p class="text-sm text-zinc-500 dark:text-zinc-400">Tech</p>
+              <p class="font-semibold">No/Low‑Code or Custom</p>
+            </div>
+            <div
+              class="rounded-2xl border border-zinc-200 p-4 dark:border-white/10"
+            >
+              <p class="text-sm text-zinc-500 dark:text-zinc-400">Pricing</p>
+              <p class="font-semibold">Fair & transparent</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================== -->
+      <!-- SERVICES                                  -->
+      <!-- TailwindPlus › Features / Cards            -->
+      <!-- ======================================== -->
+      <section id="services" class="py-24">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="max-w-2xl">
+            <h2 class="text-3xl font-semibold tracking-tight md:text-4xl">
+              What we offer
+            </h2>
+            <p class="mt-3 text-zinc-600 dark:text-zinc-300">
+              Choose the path that fits your budget and timeline. We’ll guide
+              you to the best option.
+            </p>
+          </div>
+          <div
+            class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4"
+          >
+            <article
+              class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-zinc-900"
+            >
+              <h3 class="font-semibold">Custom Websites</h3>
+              <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+                Bespoke marketing sites tailored to your brand with clean UX and
+                crisp visuals.
+              </p>
+              <ul class="mt-4 space-y-2 text-sm">
+                <li>• Performance‑first builds</li>
+                <li>• Accessibility & SEO</li>
+                <li>• Analytics & basics included</li>
+              </ul>
+            </article>
+            <article
+              class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-zinc-900"
+            >
+              <h3 class="font-semibold">No‑Code / Low‑Code</h3>
+              <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+                Webflow, Squarespace, or Framer for fast delivery and simple
+                editing.
+              </p>
+              <ul class="mt-4 space-y-2 text-sm">
+                <li>• Rapid launch</li>
+                <li>• Client‑friendly CMS</li>
+                <li>• Budget‑friendly</li>
+              </ul>
+            </article>
+            <article
+              class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-zinc-900"
+            >
+              <h3 class="font-semibold">UI/UX & Branding</h3>
+              <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+                From moodboards to polished design systems and brand kits that
+                scale.
+              </p>
+              <ul class="mt-4 space-y-2 text-sm">
+                <li>• Design sprints</li>
+                <li>• Style tiles & tokens</li>
+                <li>• Component libraries</li>
+              </ul>
+            </article>
+            <article
+              class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-zinc-900"
+            >
+              <h3 class="font-semibold">SEO & Launch Support</h3>
+              <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+                We help you get found and measure what matters post‑launch.
+              </p>
+              <ul class="mt-4 space-y-2 text-sm">
+                <li>• On‑page SEO basics</li>
+                <li>• Analytics & tags</li>
+                <li>• Hosting & domain setup</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================== -->
+      <!-- ABOUT                                      -->
+      <!-- TailwindPlus › Content / Split             -->
+      <!-- ======================================== -->
+      <section id="about" class="bg-zinc-100 py-24 dark:bg-zinc-900/40">
+        <div
+          class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-2"
+        >
+          <div>
+            <h2 class="text-3xl font-semibold tracking-tight md:text-4xl">
+              Who we are
+            </h2>
+            <p class="mt-4 text-zinc-700 dark:text-zinc-300">
+              I’m <strong>Maria Blair</strong>—a front‑end software engineer and
+              designer. I started my Creative Studio to help small businesses
+              look professional online without breaking the bank. We blend
+              modern tech with elegant design to deliver websites that feel as
+              good as they look.
+            </p>
+            <ul class="mt-6 space-y-2 text-sm text-zinc-700 dark:text-zinc-300">
+              <li>• Boca Raton, FL • Remote‑friendly</li>
+              <li>• 10+ years building for web</li>
+              <li>
+                • Modern web technologies like Angular / Webflow / Cloudflare
+              </li>
+            </ul>
+          </div>
+          <div
+            class="aspect-[4/3] rounded-3xl border border-zinc-200 bg-gradient-to-br from-fuchsia-200 via-violet-200 to-indigo-200 dark:border-white/10 dark:from-fuchsia-600/30 dark:via-violet-600/30 dark:to-indigo-600/30"
+          ></div>
+        </div>
+      </section>
+
+      <!-- ======================================== -->
+      <!-- REVIEWS / TESTIMONIALS                     -->
+      <!-- TailwindPlus › Testimonials / Cards        -->
+      <!-- ======================================== -->
+      <section id="reviews" class="py-24">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="max-w-2xl">
+            <h2 class="text-3xl font-semibold tracking-tight md:text-4xl">
+              Kind words from clients
+            </h2>
+            <p class="mt-3 text-zinc-600 dark:text-zinc-300">
+              A few highlights from recent projects.
+            </p>
+          </div>
+          <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+            <figure
+              class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-zinc-900"
+            >
+              <blockquote class="text-sm text-zinc-700 dark:text-zinc-300">
+                “Maria built us a stunning site in record time. Our customers
+                keep complimenting it—highly recommend MBCS!”
+              </blockquote>
+              <figcaption class="mt-4 text-sm font-medium">
+                — Alex R., Café Owner
+              </figcaption>
+            </figure>
+            <figure
+              class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-zinc-900"
+            >
+              <blockquote class="text-sm text-zinc-700 dark:text-zinc-300">
+                “Seamless process from design to launch. We loved the attention
+                to detail and responsive communication.”
+              </blockquote>
+              <figcaption class="mt-4 text-sm font-medium">
+                — Priya K., Wellness Studio
+              </figcaption>
+            </figure>
+            <figure
+              class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-zinc-900"
+            >
+              <blockquote class="text-sm text-zinc-700 dark:text-zinc-300">
+                “They handled everything—branding, copy, SEO basics. Our new
+                site performs great and looks beautiful.”
+              </blockquote>
+              <figcaption class="mt-4 text-sm font-medium">
+                — Daniel M., Consultant
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================== -->
+      <!-- CONTACT / LEAD FORM                        -->
+      <!-- TailwindPlus › Forms / Contact             -->
+      <!-- ======================================== -->
+      <section id="contact" class="bg-zinc-100 py-24 dark:bg-zinc-900/40">
+        <div class="mx-auto max-w-3xl px-6">
+          <div class="text-center">
+            <h2 class="text-3xl font-semibold tracking-tight md:text-4xl">
+              Let’s build something great
+            </h2>
+            <p class="mt-3 text-zinc-600 dark:text-zinc-300">
+              Tell us about your project—typical reply within 1 business day.
+            </p>
+          </div>
+
+          <!-- Netlify option: add data-netlify="true" and name="contact"; keep honeypot to reduce spam. -->
+          <!-- Cloudflare Pages Functions: post to /api/contact (see notes in <script> below). -->
+          <form
+            id="mbcs-form"
+            class="mt-10 grid gap-4 rounded-2xl border border-zinc-200 bg-white p-6 dark:border-white/10 dark:bg-zinc-900"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hidden">
+              <label>Don’t fill this out: <input name="_gotcha" /></label>
+            </p>
+            <div class="grid gap-4 md:grid-cols-2">
+              <label class="text-sm font-medium"
+                >Full name
+                <input
+                  name="name"
+                  required
+                  placeholder="Jane Doe"
+                  class="mt-2 w-full rounded-xl border border-zinc-300 bg-white px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none dark:border-white/10 dark:bg-zinc-950"
+                />
+              </label>
+              <label class="text-sm font-medium"
+                >Email
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="you@example.com"
+                  class="mt-2 w-full rounded-xl border border-zinc-300 bg-white px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none dark:border-white/10 dark:bg-zinc-950"
+                />
+              </label>
+            </div>
+            <label class="text-sm font-medium"
+              >What do you need?
+              <select
+                name="service"
+                class="mt-2 w-full rounded-xl border border-zinc-300 bg-white px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none dark:border-white/10 dark:bg-zinc-950"
+              >
+                <option>Custom website</option>
+                <option>No/Low‑Code site</option>
+                <option>UI/UX & branding</option>
+                <option>SEO & launch support</option>
+                <option>Something else</option>
+              </select>
+            </label>
+            <label class="text-sm font-medium"
+              >Message
+              <textarea
+                name="message"
+                required
+                rows="5"
+                placeholder="Tell us a bit about your business and goals..."
+                class="mt-2 w-full rounded-xl border border-zinc-300 bg-white px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none dark:border-white/10 dark:bg-zinc-950"
+              ></textarea>
+            </label>
+            <div class="flex items-center justify-between pt-2">
+              <p
+                id="mbcs-status"
+                class="text-sm text-zinc-600 dark:text-zinc-400"
+                aria-live="polite"
+              ></p>
+              <button
+                type="submit"
+                class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-fuchsia-600 to-indigo-600 px-6 py-3 font-medium text-white hover:opacity-95"
+              >
+                Send message
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ======================================== -->
+    <!-- FOOTER                                     -->
+    <!-- TailwindPlus › Footers                      -->
+    <!-- ======================================== -->
+    <footer class="border-t border-zinc-200 dark:border-white/10">
+      <div
+        class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-10 md:flex-row"
+      >
+        <nav class="flex gap-6 text-sm text-zinc-600 dark:text-zinc-300">
+          <a href="#services" class="hover:text-zinc-900 dark:hover:text-white"
+            >Services</a
+          >
+          <a href="#about" class="hover:text-zinc-900 dark:hover:text-white"
+            >About</a
+          >
+          <a href="#reviews" class="hover:text-zinc-900 dark:hover:text-white"
+            >Reviews</a
+          >
+          <a href="#contact" class="hover:text-zinc-900 dark:hover:text-white"
+            >Contact</a
+          >
+        </nav>
+        <p class="text-xs text-zinc-500">
+          © 2025 Maria Blair’s Creative Studio. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- <script>
+    // ————————————————————————————————————————————————
+    // Minimal progressive enhancement for the contact form
+    // Works with: (A) Cloudflare Pages Functions (/api/contact)
+    //             (B) Netlify Forms (set data-netlify on <form>)
+    // If you prefer Netlify Forms, add: form.setAttribute('data-netlify', 'true');
+    // ————————————————————————————————————————————————
+    (function() {
+      const form = document.getElementById('mbcs-form');
+      const status = document.getElementById('mbcs-status');
+      if (!form) return;
+
+      // Helper to serialize form data
+      function serializeForm(formEl){
+        const data = new FormData(formEl);
+        return new URLSearchParams(data).toString();
+      }
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        status.textContent = 'Sending…';
+
+        // If using Netlify Forms, allow default POST to work by removing JS handler
+        // and adding data-netlify="true" + name="contact" on the form.
+        // For Cloudflare Pages Functions, post to /api/contact.
+        try {
+          const body = serializeForm(form);
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body
+          });
+          if (res.ok) {
+            status.textContent = 'Thanks! We’ll be in touch shortly.';
+            form.reset();
+          } else {
+            status.textContent = 'Something went wrong. Please email hello@mbcs.studio.';
+          }
+        } catch (err) {
+          status.textContent = 'Network error. Please try again or email us.';
+        }
+      });
+    })();
+  </script> -->
+  </body>
+</html>

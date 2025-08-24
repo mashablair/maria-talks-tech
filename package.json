@@ -1,0 +1,20 @@
+{
+  "name": "creative-studio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:css dev:server",
+    "dev:css": "tailwindcss -i ./src/styles/input.css -o ./public/assets/styles.css --watch",
+    "dev:server": "live-server public",
+    "build": "tailwindcss -i ./src/styles/input.css -o ./public/assets/styles.css --minify",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^4.1.0",
+    "@tailwindcss/cli": "^4.1.0",
+    "typescript": "^5.5.4"
+  }
+}

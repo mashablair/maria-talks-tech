@@ -1,0 +1,16 @@
+# Dependencies
+/node_modules
+
+# VS Code
+.vscode/
+
+# Build output
+public/assets/styles.css
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Operating System files
+.DS_Store
