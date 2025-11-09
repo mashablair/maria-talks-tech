@@ -7,13 +7,19 @@
     <meta name="description" content="Maria Talks Tech — videos, tutorials, and talks on web, cloud, and AI." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <!-- TODO: DEV PREVIEW ONLY (Canvas/Local without build): Tailwind CDN. Remove before deploying to Cloudflare Pages and restore compiled CSS link. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         darkMode: ["class"],
-        theme: { extend: {} },
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Nunito Sans"', "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", '"Helvetica Neue"', "Arial", '"Noto Sans"', "sans-serif", '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"'],
+            },
+          },
+        },
       };
     </script>
     <style>
@@ -23,19 +29,19 @@
       }
     </style>
   </head>
-  <body class="bg-zinc-50 text-zinc-800 dark:bg-zinc-950 dark:text-zinc-100">
+  <body class="bg-zinc-50 text-zinc-800 font-sans dark:bg-zinc-950 dark:text-zinc-100">
     <header class="sticky top-0 z-40 border-b border-zinc-200/70 bg-white/70 backdrop-blur dark:border-white/10 dark:bg-zinc-950/60">
       <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="#home" class="flex items-center gap-3 font-semibold">
           <img src="/images/logo.png" alt="Maria Talks Tech" class="w-36" />
         </a>
-        <nav class="hidden items-center gap-8 text-sm text-zinc-600 md:flex dark:text-zinc-300">
+        <nav class="hidden items-center gap-8 text-base text-zinc-600 md:flex dark:text-zinc-300">
           <a href="#about" class="hover:text-zinc-900 dark:hover:text-white">About</a>
           <a href="#consulting" class="hover:text-zinc-900 dark:hover:text-white">Consulting</a>
           <a href="#youtube" class="hover:text-zinc-900 dark:hover:text-white">YouTube</a>
           <a href="#work" class="hover:text-zinc-900 dark:hover:text-white">Work With Me</a>
-          <a href="#speak" class="inline-flex items-center gap-2 rounded-full bg-zinc-900 px-4 py-2 font-medium text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-transparent dark:text-white dark:border dark:border-white/30"
-            ><img src="/images/megaphone-speaker-svgrepo-com.svg" alt="Ask To Speak" class="w-6 h-6" /> Ask To Speak</a
+          <a href="#speak" class="inline-flex items-center gap-2 rounded-full bg-zinc-900 px-4 py-2 font-medium text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-transparent dark:text-white dark:border dark:border-white/30">
+            <img src="/images/megaphone-speaker-svgrepo-com.svg" alt="Ask To Speak" class="w-6 h-6" /> Ask To Speak</a
           >
         </nav>
       </div>
@@ -46,9 +52,9 @@
       <section aria-labelledby="hero-heading" class="relative overflow-hidden">
         <div class="relative">
           <img src="/images/radio-wave-background.png" alt="" aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover object-center opacity-90" />
-          <div class="mx-auto flex min-h-[70vh] max-w-7xl items-end justify-center px-6 py-16 md:min-h-[82vh]">
+          <div class="mx-auto flex max-w-7xl items-end justify-center px-6 pt-24 pb-8">
             <h1 id="hero-heading" class="sr-only">Maria Talks Tech</h1>
-            <img src="/images/maria-talks.png" alt="Maria Talks Tech" class="w-[500px] max-w-full drop-shadow-[0_0_40px_rgba(255,255,255,0.35)]" />
+            <img src="/images/maria-talks.png" alt="Maria Talks Tech" class="w-full max-w-[520px] md:max-w-[600px] h-auto drop-shadow-[0_0_40px_rgba(255,255,255,0.35)]" />
           </div>
         </div>
       </section>
