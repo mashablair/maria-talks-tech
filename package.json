@@ -1,11 +1,12 @@
 {
-  "name": "creative-studio",
+  "name": "maria-talks-tech",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "npm-run-all --parallel dev:css dev:server",
     "dev:css": "tailwindcss -i ./src/styles/input.css -o ./public/assets/styles.css --watch",
-    "dev:server": "live-server public",
+    "dev:server": "live-server public --host=127.0.0.1 --port=8080 --open=/ --wait=200 --watch=public,src",
+    "dev:extension": "npm run dev:css",
     "build": "tailwindcss -i ./src/styles/input.css -o ./public/assets/styles.css --minify",
     "format": "prettier --write ."
   },
@@ -16,5 +17,16 @@
     "tailwindcss": "^4.1.0",
     "@tailwindcss/cli": "^4.1.0",
     "typescript": "^5.5.4"
+  },
+  "prettier": {
+    "bracketSameLine": true,
+    "overrides": [
+      {
+        "files": "*.html",
+        "options": {
+          "printWidth": 300
+        }
+      }
+    ]
   }
 }
