@@ -1,0 +1,38 @@
+Project-specific rules for Cursor (Maria Talks Tech)
+
+Context
+
+- OS: macOS (darwin 24.6.0), shell: zsh.
+- Repo path: <project-root> (this repository’s root)
+- Keep responses concise and skimmable. Use bullets, minimal heavy formatting.
+
+Terminal and commands
+
+- Always begin commands by cd <project-root>.
+- Prefer absolute paths over relative ones.
+- Use non-interactive flags where possible (e.g., --yes).
+- Assume no interactive input is available unless explicitly stated.
+
+Git and GitHub
+
+- Default to SSH for GitHub operations.
+- Expected remote: origin = git@github.com:mashablair/maria-talks-tech.git
+- If a Git push fails over HTTPS, suggest switching the remote to SSH instead of changing global config.
+- When showing push instructions, include: git push -u origin main.
+
+Node, npm, and tooling
+
+- Use the public npm registry by default (https://registry.npmjs.org).
+- Retain ability to use a private registry when explicitly requested; do not change global registry unless asked.
+- When installing tooling on macOS, prefer Homebrew (brew).
+
+Editing and style
+
+- Do not reformat unrelated code.
+- Preserve existing indentation width and style.
+- Comments in code should explain non-obvious intent only.
+
+Security & keys
+
+- Never print private tokens or private keys.
+- If SSH is needed, assume an ed25519 key at ~/.ssh/id_ed25519 using macOS Keychain.
