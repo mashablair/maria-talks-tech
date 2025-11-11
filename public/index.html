@@ -29,12 +29,9 @@
       html {
         scroll-behavior: smooth;
       }
-      /* Dotted/glow background for alt hero */
+      /* Dotted background for hero; glow handled by Tailwind gradient overlay */
       .bg-dots {
-        background:
-          radial-gradient(circle at center, rgba(255, 255, 255, 0.12) 1px, transparent 1.6px) 0 0/22px 22px,
-          radial-gradient(1000px 500px at 90% 0%, rgba(42, 176, 255, 0.12), transparent 55%),
-          radial-gradient(1200px 600px at 10% 10%, rgba(124, 77, 255, 0.14), transparent 60%);
+        background: radial-gradient(circle at center, rgba(255, 255, 255, 0.12) 1px, transparent 1.6px) 0 0/22px 22px;
       }
       /* Wave image overlay for alt hero */
       .bg-wave-overlay {
@@ -118,6 +115,7 @@
       <section aria-labelledby="hero-heading" class="relative overflow-hidden">
         <div class="relative">
           <div class="pointer-events-none absolute inset-0 -z-10 bg-dots"></div>
+          <div class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-fuchsia-200/60 via-violet-200/60 to-indigo-200/60 blur-3xl dark:from-fuchsia-600/20 dark:via-indigo-600/30 dark:to-black/30"></div>
           <div class="pointer-events-none absolute inset-0 -z-10 bg-wave-overlay"></div>
           <div class="mx-auto flex max-w-7xl items-end justify-center px-6 pt-24 pb-8">
             <h1 id="hero-heading" class="sr-only">Maria Talks Tech</h1>
