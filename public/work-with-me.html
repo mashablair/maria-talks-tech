@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Work With Me — Maria Talks Tech</title>
+    <meta name="description" content="Partner with Maria to make technology feel human. On-camera collaborations, thought-leadership, and tech storytelling for forward-thinking brands." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- TODO: DEV PREVIEW ONLY (Canvas/Local without build): Tailwind CDN. Remove before deploying to Cloudflare Pages and restore compiled CSS link. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: ["class"],
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Nunito Sans"', "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", '"Helvetica Neue"', "Arial", '"Noto Sans"', "sans-serif", '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"'],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- TailwindPlus Elements for dialog/menu commands (mobile menu) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+    <style>
+      /* Smooth scrolling for in-page anchors */
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Dotted background for hero; glow handled by Tailwind gradient overlay */
+      .bg-dots {
+        background: radial-gradient(circle at center, rgba(255, 255, 255, 0.12) 1px, transparent 1.6px) 0 0/22px 22px;
+      }
+      /* Wave image overlay for alt hero */
+      .bg-wave-overlay {
+        background-image: url("images/wave-bkg.png");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.15;
+      }
+    </style>
+  </head>
+  <body class="bg-zinc-50 text-zinc-800 font-sans dark:bg-zinc-950 dark:text-zinc-100">
+    <header class="sticky top-0 z-40 border-b border-zinc-200/70 bg-white/70 backdrop-blur dark:border-white/10 dark:bg-zinc-950/60">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <a href="index.html" class="flex items-center gap-3 font-semibold">
+          <img src="images/logo.png" alt="Maria Talks Tech" class="w-36" />
+        </a>
+        <nav class="hidden items-center gap-8 text-base text-zinc-600 md:flex dark:text-zinc-300">
+          <a href="index.html#about" class="hover:text-zinc-900 dark:hover:text-white">About</a>
+          <a href="index.html#consulting" class="hover:text-zinc-900 dark:hover:text-white">Consulting</a>
+          <a href="index.html#youtube" class="hover:text-zinc-900 dark:hover:text-white">YouTube</a>
+          <a href="work-with-me.html" class="hover:text-zinc-900 dark:hover:text-white">Work With Me</a>
+          <a href="index.html#speak" class="inline-flex items-center gap-2 rounded-full bg-zinc-900 px-4 py-2 font-medium text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-transparent dark:text-white dark:border dark:border-white/30">
+            <img src="images/speaker.svg" alt="Ask To Speak" class="w-6 h-6" /> Ask To Speak</a
+          >
+        </nav>
+        <!-- Mobile menu button -->
+        <button
+          type="button"
+          aria-label="Open main menu"
+          command="show-modal"
+          commandfor="mobile-menu"
+          class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-zinc-700 hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:text-zinc-200 dark:hover:bg-white/10">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="h-6 w-6">
+            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile slide-over menu -->
+      <el-dialog>
+        <dialog id="mobile-menu" class="backdrop:bg-transparent md:hidden">
+          <div tabindex="0" class="fixed inset-0 focus:outline-none">
+            <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-zinc-900/10 dark:bg-zinc-950 dark:text-zinc-100">
+              <div class="flex items-center justify-between">
+                <a href="index.html" class="-m-1.5 p-1.5">
+                  <span class="sr-only">Maria Talks Tech</span>
+                  <img src="images/logo.png" alt="" class="h-8 w-auto" />
+                </a>
+                <button type="button" aria-label="Close menu" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-white/10">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="h-6 w-6">
+                    <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-zinc-200/70 dark:divide-white/10">
+                  <div class="space-y-2 py-6">
+                    <a href="index.html#about" command="close" commandfor="mobile-menu" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-zinc-900 hover:bg-zinc-50 dark:text-zinc-100 dark:hover:bg-white/10">About</a>
+                    <a href="index.html#consulting" command="close" commandfor="mobile-menu" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-zinc-900 hover:bg-zinc-50 dark:text-zinc-100 dark:hover:bg-white/10">Consulting</a>
+                    <a href="index.html#youtube" command="close" commandfor="mobile-menu" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-zinc-900 hover:bg-zinc-50 dark:text-zinc-100 dark:hover:bg-white/10">YouTube</a>
+                    <a href="work-with-me.html" command="close" commandfor="mobile-menu" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-zinc-900 hover:bg-zinc-50 dark:text-zinc-100 dark:hover:bg-white/10">Work With Me</a>
+                  </div>
+                  <div class="py-6">
+                    <a
+                      href="index.html#speak"
+                      command="close"
+                      commandfor="mobile-menu"
+                      class="-mx-3 inline-flex items-center gap-2 rounded-full bg-zinc-900 px-4 py-2 text-base font-medium text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-transparent dark:text-white dark:border dark:border-white/30">
+                      <img src="images/speaker.svg" alt="" class="w-6 h-6" /> Ask To Speak
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </el-dialog-panel>
+          </div>
+        </dialog>
+      </el-dialog>
+    </header>
+
+    <main>
+      <!-- Work With Me Section -->
+      <section class="relative overflow-hidden bg-white py-20 md:py-32 dark:bg-zinc-950">
+        <!-- Decorative gradient orbs -->
+        <div class="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-indigo-200/40 via-violet-200/40 to-fuchsia-200/40 blur-3xl rounded-full dark:from-indigo-600/10 dark:via-violet-600/10 dark:to-fuchsia-600/10"></div>
+        <div class="pointer-events-none absolute bottom-0 right-0 translate-x-1/3 translate-y-1/3 w-[400px] h-[400px] bg-gradient-to-tl from-blue-200/30 via-indigo-200/30 to-purple-200/30 blur-3xl rounded-full dark:from-blue-600/10 dark:via-indigo-600/10 dark:to-purple-600/10"></div>
+
+        <div class="relative mx-auto max-w-7xl px-6">
+          <!-- Hero Heading -->
+          <div class="mb-16 text-center">
+            <h1 class="mb-6 text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl md:text-5xl dark:text-white">Partner with Maria to Make Technology Feel Human</h1>
+            <p class="mx-auto mb-6 max-w-3xl text-lg leading-relaxed text-zinc-600 md:text-xl dark:text-zinc-300">
+              In the era of AI and automation, people don't just need information—they need connection. Maria Blair collaborates with forward-thinking tech brands, media studios, and creative agencies to bring complex innovations to life through storytelling that is relatable, clear, and emotionally
+              resonant.
+            </p>
+            <p class="mx-auto max-w-3xl text-lg leading-relaxed text-zinc-600 md:text-xl dark:text-zinc-300">
+              Whether appearing on camera as a host, narrator, or ambassador—or contributing behind the scenes as a creative strategist—Maria helps brands communicate technology with authenticity and heart.
+            </p>
+          </div>
+
+          <!-- Ways to Collaborate -->
+          <div class="mb-20">
+            <h2 class="mb-12 text-center text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl dark:text-white">Ways to Collaborate</h2>
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <!-- Collaboration Card 1 -->
+              <div class="group rounded-2xl border border-zinc-200/50 bg-white/50 p-8 backdrop-blur-sm transition-all hover:border-indigo-300 hover:shadow-xl hover:shadow-indigo-500/10 dark:border-white/10 dark:bg-zinc-950/50 dark:hover:border-indigo-500/30">
+                <div class="mb-6 flex justify-center">
+                  <div class="rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 p-4 text-white shadow-lg shadow-indigo-500/20 transition-transform group-hover:scale-110 dark:from-indigo-400 dark:to-indigo-500">
+                    <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="mb-4 text-xl font-semibold text-zinc-900 dark:text-white">On-Camera Ambassador</h3>
+                <p class="text-zinc-600 dark:text-zinc-400">Bring warmth and credibility to your campaign. Maria serves as a relatable, trusted voice who can explain your innovation in clear, human language—ideal for educational videos, sponsored media features, or social storytelling.</p>
+              </div>
+
+              <!-- Collaboration Card 2 -->
+              <div class="group rounded-2xl border border-zinc-200/50 bg-white/50 p-8 backdrop-blur-sm transition-all hover:border-violet-300 hover:shadow-xl hover:shadow-violet-500/10 dark:border-white/10 dark:bg-zinc-950/50 dark:hover:border-violet-500/30">
+                <div class="mb-6 flex justify-center">
+                  <div class="rounded-xl bg-gradient-to-br from-violet-500 to-violet-600 p-4 text-white shadow-lg shadow-violet-500/20 transition-transform group-hover:scale-110 dark:from-violet-400 dark:to-violet-500">
+                    <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="mb-4 text-xl font-semibold text-zinc-900 dark:text-white">Thought-Leadership & Script Co-Creation</h3>
+                <p class="text-zinc-600 dark:text-zinc-400">Collaborate on content that educates and inspires. Maria partners with your creative or comms team to refine scripts, ensure technical accuracy, and keep messaging grounded and accessible.</p>
+              </div>
+
+              <!-- Collaboration Card 3 -->
+              <div class="group rounded-2xl border border-zinc-200/50 bg-white/50 p-8 backdrop-blur-sm transition-all hover:border-fuchsia-300 hover:shadow-xl hover:shadow-fuchsia-500/10 dark:border-white/10 dark:bg-zinc-950/50 dark:hover:border-fuchsia-500/30">
+                <div class="mb-6 flex justify-center">
+                  <div class="rounded-xl bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 p-4 text-white shadow-lg shadow-fuchsia-500/20 transition-transform group-hover:scale-110 dark:from-fuchsia-400 dark:to-fuchsia-500">
+                    <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="mb-4 text-xl font-semibold text-zinc-900 dark:text-white">Educational Campaigns & Event Coverage</h3>
+                <p class="text-zinc-600 dark:text-zinc-400">Turn your event or launch into a story people want to follow. Maria can host, moderate, or narrate video coverage for summits, conferences, and product showcases.</p>
+              </div>
+
+              <!-- Collaboration Card 4 -->
+              <div class="group rounded-2xl border border-zinc-200/50 bg-white/50 p-8 backdrop-blur-sm transition-all hover:border-indigo-300 hover:shadow-xl hover:shadow-indigo-500/10 dark:border-white/10 dark:bg-zinc-950/50 dark:hover:border-indigo-500/30">
+                <div class="mb-6 flex justify-center">
+                  <div class="rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 p-4 text-white shadow-lg shadow-indigo-500/20 transition-transform group-hover:scale-110 dark:from-indigo-400 dark:to-indigo-500">
+                    <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="mb-4 text-xl font-semibold text-zinc-900 dark:text-white">Behind-the-Scenes Strategy (optional add-on)</h3>
+                <p class="text-zinc-600 dark:text-zinc-400">When needed, Maria supports content teams in shaping their brand voice and storytelling frameworks to maintain consistency across campaigns.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Why Brands Work With Maria -->
+          <div class="mb-16">
+            <h2 class="mb-8 text-center text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl dark:text-white">Why Brands Work With Maria</h2>
+            <div class="mx-auto max-w-3xl">
+              <ul class="space-y-4 text-lg text-zinc-600 dark:text-zinc-300">
+                <li class="flex items-center gap-3">
+                  <span class="inline-block h-2 w-2 rounded-full bg-indigo-500 flex-shrink-0"></span>
+                  <span>10+ years of real-world software development experience</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="inline-block h-2 w-2 rounded-full bg-violet-500 flex-shrink-0"></span>
+                  <span>Deep understanding of both engineering and communication</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="inline-block h-2 w-2 rounded-full bg-fuchsia-500 flex-shrink-0"></span>
+                  <span>Professional, on-camera presence honed through her Maria Talks Tech YouTube channel</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="inline-block h-2 w-2 rounded-full bg-indigo-500 flex-shrink-0"></span>
+                  <span>Warm, trustworthy delivery that connects with diverse audiences</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="inline-block h-2 w-2 rounded-full bg-violet-500 flex-shrink-0"></span>
+                  <span>Collaborative, easy-to-direct, and deadline-reliable</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- CTA Section -->
+          <div class="text-center">
+            <h2 class="mb-6 text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl dark:text-white">Let's Collaborate</h2>
+            <p class="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-zinc-600 md:text-xl dark:text-zinc-300">Ready to make your next tech story resonate? Reach out to discuss on-camera partnerships, branded storytelling, or event collaborations.</p>
+            <a
+              href="mailto:hello@mariatalkstech.com"
+              class="group inline-flex items-center gap-3 rounded-full bg-zinc-900 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-zinc-900/20 transition-all hover:scale-105 hover:shadow-xl hover:shadow-zinc-900/30 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-white dark:text-zinc-900 dark:shadow-white/10 dark:hover:shadow-white/20">
+              <svg class="h-5 w-5 transition-transform group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span>hello@mariatalkstech.com</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-zinc-200 dark:border-white/10">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-10 md:flex-row">
+        <nav class="flex gap-6 text-sm text-zinc-600 dark:text-zinc-300">
+          <a href="index.html#about" class="hover:text-zinc-900 dark:hover:text-white">About</a>
+          <a href="index.html#consulting" class="hover:text-zinc-900 dark:hover:text-white">Consulting</a>
+          <a href="index.html#youtube" class="hover:text-zinc-900 dark:hover:text-white">YouTube</a>
+          <a href="work-with-me.html" class="hover:text-zinc-900 dark:hover:text-white">Work With Me</a>
+        </nav>
+        <p class="text-xs text-zinc-500">© 2025 Maria Talks Tech. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
