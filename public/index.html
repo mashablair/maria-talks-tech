@@ -40,6 +40,16 @@
         background-position: center;
         opacity: 0.15;
       }
+      /* Wave gradient for dark mode */
+      .dark #waveGradient stop:nth-child(1) {
+        stop-color: rgb(63, 63, 70);
+      }
+      .dark #waveGradient stop:nth-child(2) {
+        stop-color: rgb(82, 82, 91);
+      }
+      .dark #waveGradient stop:nth-child(3) {
+        stop-color: rgb(63, 63, 70);
+      }
     </style>
   </head>
   <body class="bg-zinc-50 text-zinc-800 font-sans dark:bg-zinc-950 dark:text-zinc-100">
@@ -125,7 +135,7 @@
       </section>
 
       <!-- About/CTA Section -->
-      <section class="relative overflow-hidden bg-white py-20 md:py-32 dark:bg-zinc-950">
+      <section id="intro" class="relative overflow-hidden bg-white py-20 md:py-32 dark:bg-zinc-950">
         <!-- Decorative gradient orbs -->
         <div class="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-indigo-200/40 via-violet-200/40 to-fuchsia-200/40 blur-3xl rounded-full dark:from-indigo-600/10 dark:via-violet-600/10 dark:to-fuchsia-600/10"></div>
         <div class="pointer-events-none absolute bottom-0 right-0 translate-x-1/3 translate-y-1/3 w-[400px] h-[400px] bg-gradient-to-tl from-blue-200/30 via-indigo-200/30 to-purple-200/30 blur-3xl rounded-full dark:from-blue-600/10 dark:via-indigo-600/10 dark:to-purple-600/10"></div>
@@ -185,8 +195,15 @@
         </div>
       </section>
 
+      <!-- Wave Separator -->
+      <div class="relative -mt-16 md:-mt-24" style="height: 140px; overflow: hidden">
+        <svg class="absolute bottom-0 left-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1200 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,30 Q300,110 600,35 T1200,50 L1200,140 L0,140 Z" fill="rgb(255 255 255)" class="dark:fill-indigo-900" />
+        </svg>
+      </div>
+
       <!-- About Section -->
-      <section id="about" class="relative overflow-hidden bg-zinc-50 py-20 md:py-32 dark:bg-zinc-900">
+      <section id="about" class="relative overflow-hidden bg-gradient-to-b pb-20 dark:from-indigo-900 dark:via-indigo-950 dark:to-zinc-900">
         <!-- Decorative gradient orbs -->
         <div class="pointer-events-none absolute top-1/4 right-0 translate-x-1/4 w-[500px] h-[500px] bg-gradient-to-bl from-violet-200/30 via-indigo-200/30 to-blue-200/30 blur-3xl rounded-full dark:from-violet-600/10 dark:via-indigo-600/10 dark:to-blue-600/10"></div>
         <div class="pointer-events-none absolute bottom-1/4 left-0 -translate-x-1/4 w-[450px] h-[450px] bg-gradient-to-tr from-fuchsia-200/30 via-violet-200/30 to-indigo-200/30 blur-3xl rounded-full dark:from-fuchsia-600/10 dark:via-violet-600/10 dark:to-indigo-600/10"></div>
@@ -205,10 +222,10 @@
 
               <!-- Description paragraphs -->
               <div class="mb-8 space-y-6">
-                <p class="text-lg leading-relaxed text-zinc-600 md:text-xl dark:text-zinc-300">
+                <p class="text-lg leading-relaxed text-zinc-600 dark:text-zinc-300">
                   Maria Blair is a software developer turned educator and creator on a mission to make technology more understandable and human. After a decade in frontend engineering and UX, she launched Maria Talks Tech to bridge the gap between complex innovation and everyday people.
                 </p>
-                <p class="text-lg leading-relaxed text-zinc-600 md:text-xl dark:text-zinc-300">Her work now spans YouTube, consulting, and public speaking — helping others navigate the fast-changing world of AI, automation, and digital creativity.</p>
+                <p class="text-lg leading-relaxed text-zinc-600 dark:text-zinc-300">Her work now spans YouTube, consulting, and public speaking — helping others navigate the fast-changing world of AI, automation, and digital creativity.</p>
               </div>
 
               <!-- Expertise areas -->
@@ -245,7 +262,7 @@
       </section>
 
       <!-- YouTube Section -->
-      <section id="youtube" class="relative overflow-hidden bg-white py-20 mt:py-32 dark:bg-zinc-950">
+      <section id="youtube" class="relative overflow-hidden bg-white py-20 mt:py-32 dark:bg-zinc-900">
         <!-- Decorative gradient orbs -->
         <div class="pointer-events-none absolute top-0 right-1/4 translate-x-1/4 w-[500px] h-[500px] bg-gradient-to-bl from-indigo-200/30 via-violet-200/30 to-fuchsia-200/30 blur-3xl rounded-full dark:from-indigo-600/10 dark:via-violet-600/10 dark:to-fuchsia-600/10"></div>
         <div class="pointer-events-none absolute bottom-0 left-1/4 -translate-x-1/4 w-[450px] h-[450px] bg-gradient-to-tr from-violet-200/30 via-indigo-200/30 to-blue-200/30 blur-3xl rounded-full dark:from-violet-600/10 dark:via-indigo-600/10 dark:to-blue-600/10"></div>
@@ -340,7 +357,7 @@
       </section>
 
       <!-- Slanted Images Gallery -->
-      <section class="relative overflow-hidden bg-white py-6 dark:bg-zinc-950">
+      <section class="relative overflow-hidden bg-white py-6 dark:bg-zinc-900">
         <div class="relative mx-auto max-w-7xl px-6">
           <div class="flex flex-wrap items-center justify-center gap-2 md:gap-0 overflow-visible" style="min-height: 300px">
             <!-- Image 1 -->
@@ -372,7 +389,7 @@
       </section>
 
       <!-- Media & Collaborations Section -->
-      <section id="consulting" class="relative overflow-hidden bg-zinc-50 py-20 md:py-32 dark:bg-zinc-900" style="margin-top: -100px">
+      <section id="consulting" class="relative overflow-hidden bg-zinc-50 py-20 md:py-32 dark:bg-zinc-900" style="margin-top: -60px">
         <!-- Decorative gradient orbs -->
         <div class="pointer-events-none absolute top-1/4 left-0 -translate-x-1/4 w-[500px] h-[500px] bg-gradient-to-br from-indigo-200/30 via-violet-200/30 to-fuchsia-200/30 blur-3xl rounded-full dark:from-indigo-600/10 dark:via-violet-600/10 dark:to-fuchsia-600/10"></div>
         <div class="pointer-events-none absolute bottom-1/4 right-0 translate-x-1/4 w-[450px] h-[450px] bg-gradient-to-tl from-violet-200/30 via-indigo-200/30 to-blue-200/30 blur-3xl rounded-full dark:from-violet-600/10 dark:via-indigo-600/10 dark:to-blue-600/10"></div>
@@ -466,7 +483,9 @@
               <p class="mb-4 text-lg leading-relaxed text-zinc-600 md:text-xl dark:text-zinc-300">Ready to collaborate on your next talk, campaign, or creative tech project?</p>
               <p class="mb-4 text-lg leading-relaxed text-zinc-600 md:text-xl dark:text-zinc-300">Or just want to say hi? 👋</p>
 
-              <p class="mb-8 text-lg leading-relaxed text-zinc-600 md:text-xl dark:text-zinc-300">Email me directly at <a href="mailto:mashablair@gmail.com" class="font-semibold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300">mashablair@gmail.com</a>.</p>
+              <p class="mb-8 text-lg leading-relaxed text-zinc-600 md:text-xl dark:text-zinc-300">
+                Email me directly at <a href="mailto:mashablair@gmail.com" class="font-semibold text-pink-900 hover:text-indigo-700 hover:underline dark:text-pink-500 dark:hover:text-pink-300">mashablair@gmail.com</a>.
+              </p>
               <div class="flex flex-wrap items-center gap-4">
                 <a
                   href="https://linkedin.com/in/mariaklachkoblair"
