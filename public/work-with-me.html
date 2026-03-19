@@ -46,8 +46,8 @@
           <a href="index.html#about" class="hover:text-zinc-900 dark:hover:text-white">About</a>
           <a href="index.html#consulting" class="hover:text-zinc-900 dark:hover:text-white">Consulting</a>
           <a href="index.html#youtube" class="hover:text-zinc-900 dark:hover:text-white">YouTube</a>
-          <a href="work-with-me.html" class="hover:text-zinc-900 dark:hover:text-white">Work With Me</a>
-          <a href="index.html#speak" class="inline-flex items-center gap-2 rounded-full bg-zinc-900 px-4 py-2 font-medium text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-transparent dark:text-white dark:border dark:border-white/30">
+          <a href="index.html#speak" class="hover:text-zinc-900 dark:hover:text-white">Work With Me</a>
+          <a href="work-with-me.html" class="inline-flex items-center gap-2 rounded-full bg-zinc-900 px-4 py-2 font-medium text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-transparent dark:text-white dark:border dark:border-white/30">
             <img src="icons/speaker.svg" alt="Ask To Speak" class="w-6 h-6" /> Ask To Speak</a
           >
         </nav>
@@ -85,11 +85,11 @@
                     <a href="index.html#about" command="close" commandfor="mobile-menu" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-zinc-900 hover:bg-zinc-50 dark:text-zinc-100 dark:hover:bg-white/10">About</a>
                     <a href="index.html#consulting" command="close" commandfor="mobile-menu" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-zinc-900 hover:bg-zinc-50 dark:text-zinc-100 dark:hover:bg-white/10">Consulting</a>
                     <a href="index.html#youtube" command="close" commandfor="mobile-menu" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-zinc-900 hover:bg-zinc-50 dark:text-zinc-100 dark:hover:bg-white/10">YouTube</a>
-                    <a href="work-with-me.html" command="close" commandfor="mobile-menu" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-zinc-900 hover:bg-zinc-50 dark:text-zinc-100 dark:hover:bg-white/10">Work With Me</a>
+                    <a href="index.html#speak" command="close" commandfor="mobile-menu" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-zinc-900 hover:bg-zinc-50 dark:text-zinc-100 dark:hover:bg-white/10">Work With Me</a>
                   </div>
                   <div class="py-6">
                     <a
-                      href="index.html#speak"
+                      href="work-with-me.html"
                       command="close"
                       commandfor="mobile-menu"
                       class="-mx-3 inline-flex items-center gap-2 rounded-full bg-zinc-900 px-4 py-2 text-base font-medium text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-transparent dark:text-white dark:border dark:border-white/30">
@@ -138,203 +138,205 @@
           </div>
         </div>
 
-        <!-- Strategy Sessions Section -->
-        <div id="strategy-sessions" class="bg-zinc-950 px-6 py-24 sm:py-32">
+        <!-- Work With Me Tabs -->
+        <div id="work-with-me-tabs" class="bg-zinc-950 px-6 py-16 sm:py-24">
           <div class="mx-auto max-w-7xl">
-            <div class="grid grid-cols-1 items-start gap-x-12 gap-y-16 lg:grid-cols-2">
-              <!-- Left Content Area -->
-              <div>
-                <div class="flex items-center gap-2 mb-8">
-                  <div class="h-px w-8 bg-zinc-700"></div>
-                  <span class="text-sm font-semibold tracking-widest text-zinc-500 uppercase">Strategy Sessions</span>
-                </div>
+            <!-- Tab Bar -->
+            <div class="flex justify-center mb-16 sm:mb-20">
+              <div role="tablist" aria-label="Work with Maria options" class="inline-flex flex-col sm:flex-row rounded-2xl bg-zinc-800/80 p-1.5 ring-1 ring-white/30">
+                <button
+                  role="tab"
+                  id="tab-strategy"
+                  aria-selected="true"
+                  aria-controls="strategy-sessions"
+                  data-tab="strategy"
+                  data-active="true"
+                  class="work-with-me-tab font-bold rounded-xl px-8 py-4 text-base transition-all focus:outline-none focus:ring-2 focus:ring-fuchsia-400 focus:ring-offset-2 focus:ring-offset-zinc-950 data-[active=true]:bg-fuchsia-400 data-[active=true]:text-zinc-900 data-[active=false]:text-zinc-200 data-[active=false]:hover:text-white">
+                  STRATEGY SESSIONS
+                </button>
+                <button
+                  role="tab"
+                  id="tab-speaking"
+                  aria-selected="false"
+                  aria-controls="brand-partnerships"
+                  data-tab="speaking"
+                  data-active="false"
+                  class="work-with-me-tab rounded-xl px-8 py-4 text-base font-bold transition-all focus:outline-none focus:ring-2 focus:ring-fuchsia-400 focus:ring-offset-2 focus:ring-offset-zinc-950 data-[active=true]:bg-fuchsia-400 data-[active=true]:text-zinc-900 data-[active=false]:text-zinc-200 data-[active=false]:hover:text-white">
+                  SPEAKING / PARTNERSHIPS
+                </button>
+              </div>
+            </div>
 
-                <h2 class="text-xl font-medium text-pretty text-zinc-900 sm:text-4xl dark:text-white delay-1 mb-8">Talk to someone who's <span class="text-fuchsia-400 italic font-medium">actually doing it.</span></h2>
+            <!-- Strategy Sessions Panel -->
+            <div id="strategy-sessions" role="tabpanel" aria-labelledby="tab-strategy" class="work-with-me-panel scroll-mt-24" data-panel="strategy">
+              <div class="grid grid-cols-1 items-start gap-x-12 gap-y-16 lg:grid-cols-2">
+                <!-- Left Content Area -->
+                <div>
+                  <h2 class="text-xl font-medium text-pretty text-zinc-900 sm:text-4xl dark:text-white delay-1 mb-8">Talk to someone who's <span class="text-fuchsia-400 italic font-medium">actually doing it.</span></h2>
 
-                <div class="space-y-6 text-lg font-medium text-zinc-400 max-w-xl">
-                  <p>Not a consultant with a framework.</p>
-                  <p class="text-white">A senior engineer who left corporate, is building two AI-powered products solo, and has navigated the exact disruption a lot of people are staring down right now.</p>
-                  <p>If you want to think through a career move, a product idea, personal branding, or how to actually use AI in your workflow — this is a real conversation, not a sales funnel.</p>
-                </div>
-
-                <div class="mt-16 flex flex-col gap-4">
-                  <div class="flex items-baseline gap-2">
-                    <span class="text-6xl font-medium text-teal-400">$100</span>
-                    <span class="text-xl text-zinc-500">/ hour</span>
+                  <div class="space-y-6 text-lg font-medium text-zinc-400 max-w-xl">
+                    <p>Not a consultant with a framework.</p>
+                    <p class="text-white">A senior engineer who left corporate, is building two AI-powered products solo, and has navigated the exact disruption a lot of people are staring down right now.</p>
+                    <p>If you want to think through a career move, a product idea, personal branding, or how to actually use AI in your workflow — this is a real conversation, not a sales funnel.</p>
                   </div>
-                  <p class="text-zinc-400 italic">One hour. No upsell. Come with your real questions.</p>
+
+                  <div class="mt-16 flex flex-col gap-4">
+                    <div class="flex items-baseline gap-2">
+                      <span class="text-6xl font-medium text-teal-400">$100</span>
+                      <span class="text-xl text-zinc-500">/ hour</span>
+                    </div>
+                    <p class="text-zinc-400 italic">One hour. No upsell. Come with your real questions.</p>
+                  </div>
+                </div>
+
+                <!-- Right Card Area -->
+                <div class="relative">
+                  <!-- Card Gradient Border Overlay -->
+                  <div class="absolute -inset-0.5 rounded-3xl bg-gradient-to-br from-blue-500/30 via-transparent to-fuchsia-500/20 blur-sm"></div>
+
+                  <div class="relative rounded-3xl bg-zinc-900/50 p-8 ring-1 ring-white/10 backdrop-blur-sm sm:p-10">
+                    <h3 class="text-2xl font-bold text-white mb-10">Good for...</h3>
+
+                    <ul class="space-y-6 mb-12">
+                      <li class="flex gap-3">
+                        <span class="text-teal-400">→</span>
+                        <p class="text-zinc-300">Career direction in an AI-disrupted job market</p>
+                      </li>
+                      <li class="flex gap-4 pt-4 border-t border-white/5">
+                        <span class="text-teal-400">→</span>
+                        <p class="text-zinc-300">Figuring out your next move after a layoff or pivot</p>
+                      </li>
+                      <li class="flex gap-4 pt-4 border-t border-white/5">
+                        <span class="text-teal-400">→</span>
+                        <p class="text-zinc-300">Thinking through a product idea before you build it</p>
+                      </li>
+                      <li class="flex gap-4 pt-4 border-t border-white/5">
+                        <span class="text-teal-400">→</span>
+                        <p class="text-zinc-300">Understanding where AI actually fits in your workflow</p>
+                      </li>
+                      <li class="flex gap-4 pt-4 border-t border-white/5">
+                        <span class="text-teal-400">→</span>
+                        <p class="text-zinc-300">A gut-check with someone who's in the trenches, not the sidelines</p>
+                      </li>
+                    </ul>
+
+                    <div class="flex justify-center">
+                      <a
+                        href="work-with-me.html"
+                        class="group inline-flex items-center gap-3 rounded-full bg-zinc-900 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-zinc-900/20 transition-all hover:scale-105 hover:shadow-xl hover:shadow-zinc-900/30 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-white dark:text-zinc-900 dark:shadow-white/10 dark:hover:shadow-white/20">
+                        <img src="icons/brain.svg" alt="book a session" class="w-6 h-6" />
+                        Book a Session
+                        <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </a>
+                    </div>
+
+                    <p class="mt-6 text-center text-sm text-zinc-200 italic">Let's make it real. Let's strategize.</p>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              <!-- Right Card Area -->
-              <div class="relative">
-                <!-- Card Gradient Border Overlay -->
-                <div class="absolute -inset-0.5 rounded-3xl bg-gradient-to-br from-blue-500/30 via-transparent to-fuchsia-500/20 blur-sm"></div>
+            <!-- Speaking / Partnerships Panel -->
+            <div id="brand-partnerships" role="tabpanel" aria-labelledby="tab-speaking" class="work-with-me-panel hidden scroll-mt-24" data-panel="speaking">
+              <!-- Hero / Intro -->
+              <div class="mx-auto max-w-3xl text-center mb-20">
+                <div class="flex items-center justify-center gap-2 mb-6">
+                  <div class="h-px w-8 bg-zinc-700"></div>
+                  <span class="text-sm font-semibold tracking-widest text-zinc-500 uppercase">Brand Partnerships & Speaking</span>
+                </div>
+                <h2 class="text-3xl font-medium text-pretty text-white sm:text-5xl mb-8">
+                  Real credibility.<br />
+                  <em class="font-bold text-fuchsia-400 italic">Rare combination.</em>
+                </h2>
+                <p class="text-lg text-zinc-300 max-w-2xl mx-auto mb-10" style="line-height: 2">
+                  I work with tech brands and event organizers who want something their campaigns usually don't have: a technical expert who can actually talk to people — and an audience that trusts her because she's building in public, not performing expertise.
+                </p>
 
-                <div class="relative rounded-3xl bg-zinc-900/50 p-8 ring-1 ring-white/10 backdrop-blur-sm sm:p-10">
-                  <h3 class="text-2xl font-bold text-white mb-10">Good for...</h3>
+                <a
+                  href="mailto:hello@mariatalkstech.com"
+                  class="group inline-flex items-center gap-3 rounded-full bg-fuchsia-400/10 px-6 py-3.5 text-base font-semibold text-fuchsia-400 ring-1 ring-fuchsia-400/30 transition-all hover:bg-fuchsia-400 hover:text-zinc-900 hover:ring-fuchsia-400 focus:outline-none focus:ring-2 focus:ring-fuchsia-400 focus:ring-offset-2 focus:ring-offset-zinc-950">
+                  hello@mariatalkstech.com
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
 
-                  <ul class="space-y-6 mb-12">
-                    <li class="flex gap-3">
-                      <span class="text-teal-400">→</span>
-                      <p class="text-zinc-300">Career direction in an AI-disrupted job market</p>
-                    </li>
-                    <li class="flex gap-4 pt-4 border-t border-white/5">
-                      <span class="text-teal-400">→</span>
-                      <p class="text-zinc-300">Figuring out your next move after a layoff or pivot</p>
-                    </li>
-                    <li class="flex gap-4 pt-4 border-t border-white/5">
-                      <span class="text-teal-400">→</span>
-                      <p class="text-zinc-300">Thinking through a product idea before you build it</p>
-                    </li>
-                    <li class="flex gap-4 pt-4 border-t border-white/5">
-                      <span class="text-teal-400">→</span>
-                      <p class="text-zinc-300">Understanding where AI actually fits in your workflow</p>
-                    </li>
-                    <li class="flex gap-4 pt-4 border-t border-white/5">
-                      <span class="text-teal-400">→</span>
-                      <p class="text-zinc-300">A gut-check with someone who's in the trenches, not the sidelines</p>
-                    </li>
-                  </ul>
-
-                  <div class="flex justify-center">
-                    <a
-                      href="work-with-me.html"
-                      class="group inline-flex items-center gap-3 rounded-full bg-zinc-900 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-zinc-900/20 transition-all hover:scale-105 hover:shadow-xl hover:shadow-zinc-900/30 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-white dark:text-zinc-900 dark:shadow-white/10 dark:hover:shadow-white/20">
-                      <img src="icons/brain.svg" alt="book a session" class="w-6 h-6" />
-                      Book a Session
-                      <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                      </svg>
-                    </a>
+              <!-- Services Grid (Two Cards) -->
+              <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 mb-24">
+                <!-- Card 1: Brand Partnerships & On-Camera Content -->
+                <div class="rounded-2xl bg-zinc-900/80 p-8 ring-1 ring-white/10">
+                  <div class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 ring-1 ring-white/10">
+                    <img src="icons/microphone.svg" alt="" class="w-6 h-6" />
                   </div>
+                  <h3 class="text-2xl font-semibold text-white mb-4">Brand Partnerships & On-Camera Content</h3>
+                  <p class="text-zinc-300 mb-4" style="line-height: 2">Video, social, and written content that actually lands with technical audiences. Formats that feel native to how your audience consumes — not polished corporate speak.</p>
+                  <p class="text-zinc-300 mb-6" style="line-height: 2">My audience is engineers, product people, and founders. They don't trust polished. They trust real.</p>
+                  <div class="mb-3">
+                    <span class="text-xs font-semibold tracking-widest text-zinc-500 uppercase">Formats</span>
+                  </div>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="rounded-full border border-white/30 bg-zinc-800 px-4 py-1.5 text-sm text-zinc-300">Video</span>
+                    <span class="rounded-full border border-white/30 bg-zinc-800 px-4 py-1.5 text-sm text-zinc-300">Series co-creation</span>
+                    <span class="rounded-full border border-white/30 bg-zinc-800 px-4 py-1.5 text-sm text-zinc-300">Social content</span>
+                    <span class="rounded-full border border-white/30 bg-zinc-800 px-4 py-1.5 text-sm text-zinc-300">Event coverage</span>
+                  </div>
+                </div>
 
-                  <p class="mt-6 text-center text-sm text-zinc-200 italic">Let's make it real. Let's strategize.</p>
+                <!-- Card 2: Keynotes, Panels & Conference Talks -->
+                <div class="rounded-2xl bg-zinc-900/80 p-8 ring-1 ring-white/10">
+                  <div class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 ring-1 ring-white/10">
+                    <img src="icons/speaker.svg" alt="" class="w-6 h-6" />
+                  </div>
+                  <h3 class="text-2xl font-semibold text-white mb-4">Keynotes, Panels & Conference Talks</h3>
+                  <p class="text-zinc-300 mb-4" style="line-height: 2">AI, career disruption, software engineering, and building in public. I speak from the stage and the codebase — not theory.</p>
+                  <p class="text-zinc-300 mb-6" style="line-height: 2">Available for keynotes, panels, podcasts, and company all-hands. Topics that resonate with technical and non-technical audiences alike.</p>
+                  <div class="mb-3">
+                    <span class="text-xs font-semibold tracking-widest text-zinc-500 uppercase">Available For</span>
+                  </div>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="rounded-full border border-white/30 bg-zinc-800 px-4 py-1.5 text-sm text-zinc-300">Tech conferences</span>
+                    <span class="rounded-full border border-white/30 bg-zinc-800 px-4 py-1.5 text-sm text-zinc-300">Women in tech events</span>
+                    <span class="rounded-full border border-white/30 bg-zinc-800 px-4 py-1.5 text-sm text-zinc-300">Podcasts</span>
+                    <span class="rounded-full border border-white/30 bg-zinc-800 px-4 py-1.5 text-sm text-zinc-300">Panels</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- Brand Partnerships & Speaking Section -->
-      <section id="brand-partnerships" class="bg-zinc-950 px-6 py-24 sm:py-32">
-        <div class="mx-auto max-w-7xl">
-          <!-- Hero / Intro -->
-          <div class="mx-auto max-w-3xl text-center mb-20">
-            <div class="flex items-center justify-center gap-2 mb-6">
-              <div class="h-px w-8 bg-zinc-700"></div>
-              <span class="text-sm font-semibold tracking-widest text-zinc-500 uppercase">Brand Partnerships & Speaking</span>
-            </div>
-            <h2 class="text-3xl font-medium text-pretty text-white sm:text-5xl mb-8">
-              Real credibility.<br />
-              <em class="font-bold text-fuchsia-400 italic">Rare combination.</em>
-            </h2>
-            <p class="text-lg text-zinc-300 max-w-2xl mx-auto">
-              I work with tech brands and event organizers who want something their campaigns usually don't have: a technical expert who can actually talk to people — and an audience that trusts her because she's building in public, not performing expertise.
-            </p>
-          </div>
-
-          <!-- Services Grid (Two Cards) -->
-          <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 mb-24">
-            <!-- Card 1: Brand Partnerships & On-Camera Content -->
-            <div class="rounded-2xl bg-zinc-900/80 p-8 ring-1 ring-white/10">
-              <div class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 ring-1 ring-white/10">
-                <img src="icons/microphone.svg" alt="" class="w-6 h-6" />
-              </div>
-              <h3 class="text-2xl font-semibold text-white mb-4">Brand Partnerships & On-Camera Content</h3>
-              <p class="text-zinc-300 mb-4" style="line-height: 2">Video, social, and written content that actually lands with technical audiences. Formats that feel native to how your audience consumes — not polished corporate speak.</p>
-              <p class="text-zinc-300 mb-6" style="line-height: 2">My audience is engineers, product people, and founders. They don't trust polished. They trust real.</p>
-              <div class="mb-3">
-                <span class="text-xs font-semibold tracking-widest text-zinc-500 uppercase">Formats</span>
-              </div>
-              <div class="flex flex-wrap gap-2">
-                <span class="rounded-full border border-white/30 bg-zinc-800 px-4 py-1.5 text-sm text-zinc-300">Video</span>
-                <span class="rounded-full border border-white/30 bg-zinc-800 px-4 py-1.5 text-sm text-zinc-300">Series co-creation</span>
-                <span class="rounded-full border border-white/30 bg-zinc-800 px-4 py-1.5 text-sm text-zinc-300">Social content</span>
-                <span class="rounded-full border border-white/30 bg-zinc-800 px-4 py-1.5 text-sm text-zinc-300">Event coverage</span>
-              </div>
-            </div>
-
-            <!-- Card 2: Keynotes, Panels & Conference Talks -->
-            <div class="rounded-2xl bg-zinc-900/80 p-8 ring-1 ring-white/10">
-              <div class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 ring-1 ring-white/10">
-                <img src="icons/speaker.svg" alt="" class="w-6 h-6" />
-              </div>
-              <h3 class="text-2xl font-semibold text-white mb-4">Keynotes, Panels & Conference Talks</h3>
-              <p class="text-zinc-300 mb-4" style="line-height: 2">AI, career disruption, software engineering, and building in public. I speak from the stage and the codebase — not theory.</p>
-              <p class="text-zinc-300 mb-6" style="line-height: 2">Available for keynotes, panels, podcasts, and company all-hands. Topics that resonate with technical and non-technical audiences alike.</p>
-              <div class="mb-3">
-                <span class="text-xs font-semibold tracking-widest text-zinc-500 uppercase">Available For</span>
-              </div>
-              <div class="flex flex-wrap gap-2">
-                <span class="rounded-full border border-white/30 bg-zinc-800 px-4 py-1.5 text-sm text-zinc-300">Tech conferences</span>
-                <span class="rounded-full border border-white/30 bg-zinc-800 px-4 py-1.5 text-sm text-zinc-300">Women in tech events</span>
-                <span class="rounded-full border border-white/30 bg-zinc-800 px-4 py-1.5 text-sm text-zinc-300">Podcasts</span>
-                <span class="rounded-full border border-white/30 bg-zinc-800 px-4 py-1.5 text-sm text-zinc-300">Panels</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Why work with Maria -->
-          <div class="rounded-2xl bg-zinc-900/80 p-8 sm:p-12 ring-1 ring-white/10 mb-24">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              <h3 class="text-2xl sm:text-3xl font-semibold text-white">Why work with <span class="text-fuchsia-400">Maria</span></h3>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <ul class="space-y-4">
-                  <li class="flex gap-3">
-                    <span class="text-fuchsia-400 shrink-0 mt-0.5">✓</span>
-                    <span class="text-zinc-300">10+ years shipping real software in production</span>
-                  </li>
-                  <li class="flex gap-3">
-                    <span class="text-fuchsia-400 shrink-0 mt-0.5">✓</span>
-                    <span class="text-zinc-300">Immigrant, mother, solo founder — a perspective that's genuinely rare</span>
-                  </li>
-                </ul>
-                <ul class="space-y-4">
-                  <li class="flex gap-3">
-                    <span class="text-fuchsia-400 shrink-0 mt-0.5">✓</span>
-                    <span class="text-zinc-300">Currently building AI-powered products solo — not theorizing about it</span>
-                  </li>
-                  <li class="flex gap-3">
-                    <span class="text-fuchsia-400 shrink-0 mt-0.5">✓</span>
-                    <span class="text-zinc-300">Understands both the engineering room and the stage</span>
-                  </li>
-                  <li class="flex gap-3">
-                    <span class="text-fuchsia-400 shrink-0 mt-0.5">✓</span>
-                    <span class="text-zinc-300">Direct to work with. No middlemen. Human.</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Contact / CTA Cards -->
-          <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
-            <!-- Card 01: Book a Strategy Session -->
-            <div class="relative rounded-2xl bg-zinc-900/80 p-8 ring-1 ring-white/10 overflow-hidden">
-              <span class="pretty-serif-font absolute top-2 right-6 text-6xl font-bold text-zinc-800/80">01</span>
-              <h3 class="text-xl font-semibold text-white mb-4">Book a Strategy Session</h3>
-              <p class="text-zinc-400 mb-8">$100/hour. One conversation with someone who's in it. Come with your real questions.</p>
-              <a href="mailto:hello@mariatalkstech.com" class="group inline-flex items-center gap-2 rounded-full bg-fuchsia-400 px-6 py-3 text-base font-semibold text-zinc-900 hover:bg-fuchsia-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-400 focus:ring-offset-2 focus:ring-offset-zinc-950">
-                hello@mariatalkstech.com
-                <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
-
-            <!-- Card 02: Brand & Speaking Inquiries -->
-            <div class="relative rounded-2xl bg-zinc-900/80 p-8 ring-1 ring-white/10 overflow-hidden">
-              <span class="pretty-serif-font absolute top-2 right-6 text-6xl font-bold text-zinc-800/80">02</span>
-              <h3 class="text-xl font-semibold text-white mb-4">Brand & Speaking Inquiries</h3>
-              <p class="text-zinc-400 mb-8">For partnership proposals, speaking requests, and media collaborations. Reach out directly — no agency, no middleman.</p>
-              <a href="mailto:hello@mariatalkstech.com" class="group inline-flex items-center gap-2 text-base font-semibold text-white hover:text-fuchsia-400 transition-colors focus:outline-none focus:ring-2 focus:ring-fuchsia-500 focus:ring-offset-2 focus:ring-offset-zinc-950 rounded">
-                hello@mariatalkstech.com
-                <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
+        <!-- Why work with Maria -->
+        <div class="rounded-2xl bg-zinc-900/80 p-8 sm:p-12 ring-1 ring-white/10 mb-20 mx-auto max-w-7xl">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <h3 class="text-2xl sm:text-3xl font-semibold text-white">Why work with <span class="text-fuchsia-400">Maria?</span></h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <ul class="space-y-4">
+                <li class="flex gap-3">
+                  <span class="text-fuchsia-400 shrink-0 mt-0.5">✓</span>
+                  <span class="text-zinc-300">10+ years shipping real software in production</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-fuchsia-400 shrink-0 mt-0.5">✓</span>
+                  <span class="text-zinc-300">Immigrant, mother, solo founder — a perspective that's genuinely rare</span>
+                </li>
+              </ul>
+              <ul class="space-y-4">
+                <li class="flex gap-3">
+                  <span class="text-fuchsia-400 shrink-0 mt-0.5">✓</span>
+                  <span class="text-zinc-300">Currently building AI-powered products solo — not theorizing about it</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-fuchsia-400 shrink-0 mt-0.5">✓</span>
+                  <span class="text-zinc-300">Understands both the engineering room and the stage</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-fuchsia-400 shrink-0 mt-0.5">✓</span>
+                  <span class="text-zinc-300">Direct to work with. No middlemen. Human.</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -364,5 +366,36 @@
         <p class="text-xs text-zinc-500">© 2025 Maria Talks Tech. All rights reserved.</p>
       </div>
     </footer>
+
+    <script>
+      (function () {
+        const tabs = document.querySelectorAll(".work-with-me-tab");
+        const panels = document.querySelectorAll(".work-with-me-panel");
+
+        function activateTab(tabId) {
+          const isStrategy = tabId === "strategy";
+          tabs.forEach((tab) => {
+            tab.setAttribute("data-active", tab.dataset.tab === tabId ? "true" : "false");
+            tab.setAttribute("aria-selected", tab.dataset.tab === tabId ? "true" : "false");
+          });
+          panels.forEach((panel) => {
+            panel.classList.toggle("hidden", panel.dataset.panel !== tabId);
+          });
+          history.replaceState(null, "", "#" + (isStrategy ? "strategy-sessions" : "brand-partnerships"));
+        }
+
+        function syncFromHash() {
+          const hash = window.location.hash.slice(1);
+          activateTab(hash === "brand-partnerships" ? "speaking" : "strategy");
+        }
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => activateTab(tab.dataset.tab));
+        });
+        window.addEventListener("hashchange", syncFromHash);
+
+        syncFromHash();
+      })();
+    </script>
   </body>
 </html>
