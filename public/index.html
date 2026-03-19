@@ -18,27 +18,6 @@
       html {
         scroll-behavior: smooth;
       }
-      /* Dotted background for hero; glow handled by Tailwind gradient overlay */
-      .bg-dots {
-        background: radial-gradient(circle at center, rgba(255, 255, 255, 0.12) 1px, transparent 1.6px) 0 0/22px 22px;
-      }
-      /* Wave image overlay for alt hero */
-      .bg-wave-overlay {
-        background-image: url("images/wave-bkg.png");
-        background-size: cover;
-        background-position: center;
-        opacity: 0.15;
-      }
-      /* Wave gradient for dark mode */
-      .dark #waveGradient stop:nth-child(1) {
-        stop-color: rgb(63, 63, 70);
-      }
-      .dark #waveGradient stop:nth-child(2) {
-        stop-color: rgb(82, 82, 91);
-      }
-      .dark #waveGradient stop:nth-child(3) {
-        stop-color: rgb(63, 63, 70);
-      }
       /* Serif headings */
       .font-serif-headings h1,
       .font-serif-headings h2,
@@ -118,7 +97,7 @@
       <section aria-labelledby="hero-heading" class="w-full">
         <div class="w-full">
           <h1 id="hero-heading" class="sr-only">Maria Talks Tech</h1>
-          <img src="images/hero.png" alt="Maria Talks Tech" class="w-full h-auto" />
+          <img src="images/hero.png" srcset="images/hero-640w.png 640w, images/hero-960w.png 960w, images/hero.png 1280w" sizes="100vw" width="1280" height="720" alt="Maria Talks Tech" class="w-full h-auto" fetchpriority="high" />
         </div>
       </section>
 
@@ -173,7 +152,18 @@
           <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center">
             <!-- Left Column: Image -->
             <div class="order-2 lg:order-1">
-              <img src="images/IMG_6094.jpeg" alt="Maria Blair" class="w-full rounded-2xl shadow-xl object-cover" />
+              <picture>
+                <source type="image/webp" srcset="images/maria-vr-1180x1560.webp 2x" />
+                <img
+                  src="images/maria-vr-590x780.jpg"
+                  srcset="images/maria-vr-1180x1560.jpg 2x"
+                  width="590"
+                  height="780"
+                  alt="Maria trying a VR headset"
+                  class="w-full rounded-2xl shadow-xl object-cover"
+                  loading="lazy"
+                  decoding="async" />
+              </picture>
             </div>
 
             <!-- Right Column: Content -->
@@ -326,23 +316,23 @@
             </div>
             <!-- Image 2 -->
             <div class="relative -ml-6" style="transform: rotate(-4deg) translateY(10px); z-index: 2">
-              <img src="images/three-devs.png" alt="Three Women Together" class="w-32 h-40 lg:w-44 lg:h-56 xl:w-56 xl:h-72 rounded-lg border-4 border-white shadow-xl object-cover" style="box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15)" />
+              <img src="images/three-devs.jpg" alt="Three dev relations developers together at a conference" class="w-32 h-40 lg:w-44 lg:h-56 xl:w-56 xl:h-72 rounded-lg border-4 border-white shadow-xl object-cover" style="box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15)" />
             </div>
             <!-- Image 3 -->
             <div class="relative -ml-6" style="transform: rotate(5deg) translateY(-20px); z-index: 3">
-              <img src="images/chrome-summit-sitting.jpeg" alt="Chrome Summit" class="w-32 h-40 lg:w-44 lg:h-56 xl:w-56 xl:h-72 rounded-lg border-4 border-white shadow-xl object-cover" style="box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15)" />
+              <img src="images/chrome-summit-sitting.jpeg" alt="Maria sitting at a Chrome Summit" class="w-32 h-40 lg:w-44 lg:h-56 xl:w-56 xl:h-72 rounded-lg border-4 border-white shadow-xl object-cover" style="box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15)" />
             </div>
             <!-- Image 4 -->
             <div class="relative -ml-6" style="transform: rotate(-3deg) translateY(5px); z-index: 2">
-              <img src="images/taking-pics.JPG" alt="Taking Pictures" class="w-32 h-40 lg:w-44 lg:h-56 xl:w-56 xl:h-72 rounded-lg border-4 border-white shadow-xl object-cover" style="box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15)" />
+              <img src="images/taking-pics.jpg" alt="Maria taking pictures at a conference" class="w-32 h-40 lg:w-44 lg:h-56 xl:w-56 xl:h-72 rounded-lg border-4 border-white shadow-xl object-cover" style="box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15)" />
             </div>
             <!-- Image 5 -->
             <div class="relative -ml-6" style="transform: rotate(-6deg) translateY(15px); z-index: 2">
-              <img src="images/with-chrome-advcoate.jpeg" alt="With Chrome Advocate" class="w-32 h-40 lg:w-44 lg:h-56 xl:w-56 xl:h-72 rounded-lg border-4 border-white shadow-xl object-cover" style="box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15)" />
+              <img src="images/crazy-faces.jpg" alt="With Chrome Advocate making funny faces" class="w-32 h-40 lg:w-44 lg:h-56 xl:w-56 xl:h-72 rounded-lg border-4 border-white shadow-xl object-cover" style="box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15)" />
             </div>
             <!-- Image 6 -->
             <div class="relative -ml-6" style="transform: rotate(5deg) translateY(-20px); z-index: 1">
-              <img src="images/chris.png" alt="With Developer Advocate" class="w-32 h-40 lg:w-44 lg:h-56 xl:w-56 xl:h-72 rounded-lg border-4 border-white shadow-xl object-cover" style="box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15)" />
+              <img src="images/chris.jpg" alt="With Chris Ferdinandi at a conference" class="w-32 h-40 lg:w-44 lg:h-56 xl:w-56 xl:h-72 rounded-lg border-4 border-white shadow-xl object-cover" style="box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15)" />
             </div>
           </div>
         </div>
