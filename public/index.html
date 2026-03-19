@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="favicon.png" />
     <!-- TailwindPlus Elements for dialog/menu commands (mobile menu) -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
     <style>
@@ -53,7 +55,6 @@
         </a>
         <nav class="hidden items-center gap-8 text-base text-zinc-600 md:flex dark:text-zinc-300">
           <a href="#about" class="hover:text-zinc-900 dark:hover:text-white">About</a>
-          <a href="#consulting" class="hover:text-zinc-900 dark:hover:text-white">Consulting</a>
           <a href="#youtube" class="hover:text-zinc-900 dark:hover:text-white">YouTube</a>
           <a href="#speak" class="hover:text-zinc-900 dark:hover:text-white">Work With Me</a>
           <a href="work-with-me.html" class="inline-flex items-center gap-2 rounded-full bg-zinc-900 px-4 py-2 font-medium text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-transparent dark:text-white dark:border dark:border-white/30">
@@ -92,7 +93,6 @@
                 <div class="-my-6 divide-y divide-zinc-200/70 dark:divide-white/10">
                   <div class="space-y-2 py-6">
                     <a href="#about" command="close" commandfor="mobile-menu" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-zinc-900 hover:bg-zinc-50 dark:text-zinc-100 dark:hover:bg-white/10">About</a>
-                    <a href="#consulting" command="close" commandfor="mobile-menu" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-zinc-900 hover:bg-zinc-50 dark:text-zinc-100 dark:hover:bg-white/10">Consulting</a>
                     <a href="#youtube" command="close" commandfor="mobile-menu" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-zinc-900 hover:bg-zinc-50 dark:text-zinc-100 dark:hover:bg-white/10">YouTube</a>
                     <a href="#speak" command="close" commandfor="mobile-menu" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-zinc-900 hover:bg-zinc-50 dark:text-zinc-100 dark:hover:bg-white/10">Work With Me</a>
                   </div>
@@ -113,7 +113,7 @@
       </el-dialog>
     </header>
 
-    <main id="home" class="font-serif-headings">
+    <main id="about" class="font-serif-headings">
       <!-- Hero -->
       <section aria-labelledby="hero-heading" class="w-full">
         <div class="w-full">
@@ -123,7 +123,7 @@
       </section>
 
       <!-- About/CTA Section -->
-      <section id="intro" class="relative overflow-hidden bg-white py-20 md:py-32 dark:bg-zinc-950 mb-16">
+      <section class="relative overflow-hidden bg-white py-20 md:py-32 dark:bg-zinc-950 mb-16">
         <!-- Decorative gradient orbs -->
         <div class="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-indigo-200/40 via-violet-200/40 to-fuchsia-200/40 blur-3xl rounded-full dark:from-indigo-600/10 dark:via-violet-600/10 dark:to-fuchsia-600/10"></div>
         <div class="pointer-events-none absolute bottom-0 right-0 translate-x-1/3 translate-y-1/3 w-[400px] h-[400px] bg-gradient-to-tl from-blue-200/30 via-indigo-200/30 to-purple-200/30 blur-3xl rounded-full dark:from-blue-600/10 dark:via-indigo-600/10 dark:to-purple-600/10"></div>
@@ -164,7 +164,7 @@
       </div>
 
       <!-- About Section -->
-      <section id="about" class="relative overflow-hidden bg-gradient-to-b pb-20 dark:from-fuchsia-800/80 dark:via-violet-900/80 dark:to-zinc-900">
+      <section class="relative overflow-hidden bg-gradient-to-b pb-20 dark:from-fuchsia-800/80 dark:via-violet-900/80 dark:to-zinc-900">
         <!-- Decorative gradient orbs -->
         <div class="pointer-events-none absolute top-1/4 right-0 translate-x-1/4 w-[500px] h-[500px] bg-gradient-to-bl from-violet-200/30 via-indigo-200/30 to-blue-200/30 blur-3xl rounded-full dark:from-violet-600/10 dark:via-indigo-600/10 dark:to-blue-600/10"></div>
         <div class="pointer-events-none absolute bottom-1/4 left-0 -translate-x-1/4 w-[450px] h-[450px] bg-gradient-to-tr from-fuchsia-200/30 via-violet-200/30 to-indigo-200/30 blur-3xl rounded-full dark:from-fuchsia-600/10 dark:via-violet-600/10 dark:to-indigo-600/10"></div>
@@ -370,9 +370,9 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
               </div>
-              <h3 class="mb-4 font-serif text-2xl font-semibold text-white">Strategy Sessions — $100/hr</h3>
+              <h3 class="mb-4 font-serif text-2xl font-semibold text-white">Strategy Sessions — $99/hr</h3>
               <p class="mb-6 text-zinc-300" style="line-height: 2">
-                Not a consultant with a framework. A senior engineer navigating the same AI disruption you are — who charges a flat $100/hour to think through your specific situation. Career moves, product ideas, AI workflow, what's next. Come with real questions.
+                Not a consultant with a framework. A senior engineer navigating the same AI disruption you are — who charges a flat $99/hour to think through your specific situation. Career moves, product ideas, AI workflow, what's next. Come with real questions.
               </p>
 
               <p class="mb-6 text-zinc-300" style="line-height: 2">I'll help you get <span class="text-fuchsia-400 italic font-medium">unstuck.</span></p>
@@ -389,7 +389,7 @@
               <div class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 ring-1 ring-white/10">
                 <img src="icons/microphone.svg" alt="" class="h-6 w-6" />
               </div>
-              <h3 class="mb-4 font-serif text-2xl font-semibold text-white">Brand Partnerships & Speaking</h3>
+              <h3 class="mb-4 font-serif text-2xl font-semibold text-white">Speaking & Brand Partnerships</h3>
               <p class="mb-6 text-zinc-300" style="line-height: 2">
                 My audience is software engineers who are skeptical of hype and notice when something is authentic. I collaborate with tech brands on sponsored content, product demos, and educational series — and I speak at conferences and events on AI, career disruption, and women in tech.
               </p>
@@ -425,7 +425,6 @@
       <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-10 md:flex-row">
         <nav class="flex gap-6 text-sm text-zinc-600 dark:text-zinc-300">
           <a href="#about" class="hover:text-zinc-900 dark:hover:text-white">About</a>
-          <a href="#consulting" class="hover:text-zinc-900 dark:hover:text-white">Consulting</a>
           <a href="#youtube" class="hover:text-zinc-900 dark:hover:text-white">YouTube</a>
           <a href="work-with-me.html" class="hover:text-zinc-900 dark:hover:text-white">Work With Me</a>
           <a href="https://linkedin.com/in/mariaklachkoblair" target="_blank" rel="noopener noreferrer" class="">
