@@ -154,15 +154,7 @@
             <div class="order-2 lg:order-1">
               <picture>
                 <source type="image/webp" srcset="images/maria-vr-1180x1560.webp 2x" />
-                <img
-                  src="images/maria-vr-590x780.jpg"
-                  srcset="images/maria-vr-1180x1560.jpg 2x"
-                  width="590"
-                  height="780"
-                  alt="Maria trying a VR headset"
-                  class="w-full rounded-2xl shadow-xl object-cover"
-                  loading="lazy"
-                  decoding="async" />
+                <img src="images/maria-vr-590x780.jpg" srcset="images/maria-vr-1180x1560.jpg 2x" width="590" height="780" alt="Maria trying a VR headset" class="w-full rounded-2xl shadow-xl object-cover" loading="lazy" decoding="async" />
               </picture>
             </div>
 
@@ -179,25 +171,20 @@
 
               <!-- Expertise areas -->
               <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <div class="group rounded-2xl border border-zinc-200/50 bg-white/50 p-6 backdrop-blur-sm transition-all hover:border-indigo-300 hover:shadow-lg hover:shadow-indigo-500/10 dark:border-white/10 dark:bg-zinc-950/50 dark:hover:border-indigo-500/30">
+                <div class="group rounded-2xl border bg-white/50 p-6 backdrop-blur-sm transition-all border-indigo-300 shadow-lg shadow-indigo-500/10 dark:bg-zinc-950/50 dark:border-indigo-500/30">
                   <div class="flex items-center gap-2">
                     <span class="inline-block h-2 w-2 rounded-full bg-indigo-500"></span>
                     <div class="text-base font-semibold text-zinc-900 dark:text-white">Software Engineer (11+)</div>
                   </div>
-                </div>
-                <div class="group rounded-2xl border border-zinc-200/50 bg-white/50 p-6 backdrop-blur-sm transition-all hover:border-violet-300 hover:shadow-lg hover:shadow-violet-500/10 dark:border-white/10 dark:bg-zinc-950/50 dark:hover:border-violet-500/30">
+
                   <div class="flex items-center gap-2">
                     <span class="inline-block h-2 w-2 rounded-full bg-violet-500"></span>
                     <div class="text-base font-semibold text-zinc-900 dark:text-white">AI & Future of Work</div>
                   </div>
-                </div>
-                <div class="group rounded-2xl border border-zinc-200/50 bg-white/50 p-6 backdrop-blur-sm transition-all hover:border-fuchsia-300 hover:shadow-lg hover:shadow-fuchsia-500/10 dark:border-white/10 dark:bg-zinc-950/50 dark:hover:border-fuchsia-500/30">
                   <div class="flex items-center gap-2">
                     <span class="inline-block h-2 w-2 rounded-full bg-fuchsia-500"></span>
                     <div class="text-base font-semibold text-zinc-900 dark:text-white">Women in Tech</div>
                   </div>
-                </div>
-                <div class="group rounded-2xl border border-zinc-200/50 bg-white/50 p-6 backdrop-blur-sm transition-all hover:border-indigo-300 hover:shadow-lg hover:shadow-indigo-500/10 dark:border-white/10 dark:bg-zinc-950/50 dark:hover:border-indigo-500/30">
                   <div class="flex items-center gap-2">
                     <span class="inline-block h-2 w-2 rounded-full bg-indigo-500"></span>
                     <div class="text-base font-semibold text-zinc-900 dark:text-white">Developer Experience</div>
@@ -353,6 +340,22 @@
 
           <!-- Service cards -->
           <div class="mb-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
+            <!-- Full-width row; inner 2-col grid matches parent so card 1 box = width of cards 2–3 -->
+            <div class="lg:col-span-2 lg:grid lg:grid-cols-2 lg:gap-8">
+              <div class="group relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/50 p-8 backdrop-blur-sm">
+                <div class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 ring-1 ring-white/10">
+                  <img src="icons/hand-shake.svg" alt="" class="h-6 w-6" />
+                </div>
+                <h3 class="mb-4 font-serif text-2xl font-semibold text-white">Say Hi 15-min Chat — Free</h3>
+                <p class="mb-6 text-zinc-300" style="line-height: 2">If you're a subscriber and want to say hi, reach out. I genuinely want to know who's watching and what you are experiencing.</p>
+
+                <p class="mb-6 text-zinc-300" style="line-height: 2">Email me at <a href="mailto:hello@mariatalkstech.com" class="text-fuchsia-400 font-medium">hello@mariatalkstech.com</a> and we'll find 15 minutes on Zoom. No agenda. Just a real conversation.</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full border border-white/30 px-4 py-1.5 text-sm text-zinc-300">Subscribers welcome</span>
+                </div>
+              </div>
+              <div class="hidden lg:block" aria-hidden="true"></div>
+            </div>
             <!-- Strategy Sessions Card -->
             <div class="group relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/50 p-8 backdrop-blur-sm">
               <div class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 ring-1 ring-white/10">
